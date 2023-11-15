@@ -41,7 +41,15 @@ function transform_link(rootElement) {
 		return
 	}
 
-	[].forEach.call(elements, function(element) {
+	// Because we are doing a replaceWith() on the HTMLCollection,
+	// we need to iterate through it backwards, because the HTMLCollection
+	// will change size and what is in it each time we do that.
+	//
+	//@TODO: Is there a better way of dealing with this?
+	for (let i = length-1; i >= 0; i--) {
+
+		const element = elements[i]
+
 		const anchor = document.createElement("a")
 
 		anchor.innerHTML = element.innerHTML
@@ -56,5 +64,5 @@ function transform_link(rootElement) {
 		anchor.setAttribute("href", href)
 
 		element.replaceWith(anchor)
-	})
+	}
 }
