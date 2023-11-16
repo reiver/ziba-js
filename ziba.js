@@ -20,26 +20,38 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 export function transform(rootElement) {
+	console.log("[ziba][transform] begin")
+
 	if (undefined === rootElement) {
+		console.log("[ziba][transform] root-elelemt is undefined")
+		console.log("[ziba][transform] end")
 		return
 	}
 
 	transform_link(rootElement)
+
+	console.log("[ziba][transform] end")
 }
 
 function transform_link(rootElement) {
+	console.log("[ziba][transform_link] begin")
+
 	if (undefined === rootElement) {
-		console.log("[ziba] root-elelemt is undefined")
+		console.log("[ziba][transform_link] root-elelemt is undefined")
+		console.log("[ziba][transform_link] end")
 		return
 	}
 
 	const tagName = "ziba-link"
 	const elements = rootElement.getElementsByTagName(tagName)
 	if (!elements) {
-		console.log("[ziba] no elements")
-		console.log("[ziba] rootElement.innerHTML=", rootElement.innerHTML)
+		console.log("[ziba][transform_link] no elements")
+		console.log("[ziba][transform_link] rootElement.innerHTML=", rootElement.innerHTML)
+		console.log("[ziba][transform_link] end")
 		return
 	}
+	const length = elements.length
+	console.log("[ziba][transform_link] found", length, tagName)
 
 	// Because we are doing a replaceWith() on the HTMLCollection,
 	// we need to iterate through it backwards, because the HTMLCollection
@@ -65,4 +77,6 @@ function transform_link(rootElement) {
 
 		element.replaceWith(anchor)
 	}
+
+	console.log("[ziba][transform_link] end")
 }

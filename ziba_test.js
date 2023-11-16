@@ -66,6 +66,13 @@ function testTransform() {
 			html:'<ziba-link title="1 2 3 4">ONCE TWICE THRICE FOURCE</ziba-link>',
 			expected:'<a href="./1 2 3 4">ONCE TWICE THRICE FOURCE</a>',
 		},
+
+
+
+		{
+			html:'<ul><li><ziba-link>one</ziba-link></li><li><ziba-link>two</ziba-link></li><li><ziba-link>three</ziba-link></li></ul>',
+			expected:'<ul><li><a href="./one">one</a></li><li><a href="./two">two</a></li><li><a href="./three">three</a></li></ul>',
+		},
 	]
 
 
