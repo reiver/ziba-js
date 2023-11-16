@@ -78,11 +78,17 @@ function transform_link(rootElement) {
 			case "lowercase":
 				ref = ref.toLowerCase()
 			break;
+			case "lowerllamacase":
+				ref = ref.toLowerCase().replaceAll(" ", "")
+			break;
 			case "lowersnakecase":
 				ref = ref.toLowerCase().replaceAll(" ", "_")
 			break;
 			case "uppercase":
 				ref = ref.toUpperCase()
+			break;
+			case "upperllamacase":
+				ref = ref.toUpperCase().replaceAll(" ", "")
 			break;
 			case "uppersnakecase":
 				ref = ref.toUpperCase().replaceAll(" ", "_")

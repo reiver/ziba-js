@@ -39,6 +39,12 @@ Here is an example usage of **ziba.js**:
 				<ziba-link tramsform="uppersnakecase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./ONCE_TWICE_THRICE_FOURCE">once Twice tHRICE FOURCE</a>
 			</p>
 			<p>
+				<ziba-link tramsform="lowerllamacase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./oncetwicethricefource">once Twice tHRICE FOURCE</a>
+			</p>
+			<p>
+				<ziba-link tramsform="upperllamacase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./ONCETWICETHRICEFOURCE">once Twice tHRICE FOURCE</a>
+			</p>
+			<p>
 				ziba-link is designed to work for only local links.
 			</p>
 		</div>
