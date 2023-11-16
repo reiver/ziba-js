@@ -20,38 +20,38 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 */
 export function transform(rootElement) {
-	console.log("[ziba][transform] begin")
+	log("[transform] begin")
 
 	if (undefined === rootElement) {
-		console.log("[ziba][transform] root-elelemt is undefined")
-		console.log("[ziba][transform] end")
+		log("[transform] root-elelemt is undefined")
+		log("[transform] end")
 		return
 	}
 
 	transform_link(rootElement)
 
-	console.log("[ziba][transform] end")
+	log("[transform] end")
 }
 
 function transform_link(rootElement) {
-	console.log("[ziba][transform_link] begin")
+	log("[transform_link] begin")
 
 	if (undefined === rootElement) {
-		console.log("[ziba][transform_link] root-elelemt is undefined")
-		console.log("[ziba][transform_link] end")
+		logerror("[transform_link] root-elelemt is undefined")
+		log("[transform_link] end")
 		return
 	}
 
 	const tagName = "ziba-link"
 	const elements = rootElement.getElementsByTagName(tagName)
 	if (!elements) {
-		console.log("[ziba][transform_link] no elements")
-		console.log("[ziba][transform_link] rootElement.innerHTML=", rootElement.innerHTML)
-		console.log("[ziba][transform_link] end")
+		logerror("[transform_link] no elements")
+		log("[transform_link] rootElement.innerHTML=", rootElement.innerHTML)
+		log("[transform_link] end")
 		return
 	}
 	const length = elements.length
-	console.log("[ziba][transform_link] found", length, tagName)
+	log("[transform_link] found", length, tagName)
 
 	// Because we are doing a replaceWith() on the HTMLCollection,
 	// we need to iterate through it backwards, because the HTMLCollection
@@ -66,17 +66,48 @@ function transform_link(rootElement) {
 
 		anchor.innerHTML = element.innerHTML
 
-		let href = element.innerText
+		let ref = element.innerText
 		const elementTitle = element.getAttribute("title")
 		if (elementTitle) {
-			href = elementTitle
+			ref = elementTitle
 		}
-		href = "./"+href
 
+		const transform = element.getAttribute("transform")
+		if (transform) {
+			switch (transform) {
+			case "lowercase":
+				ref = ref.toLowerCase()
+			break;
+			case "lowersnakecase":
+				ref = ref.toLowerCase().replaceAll(" ", "_")
+			break;
+			case "uppercase":
+				ref = ref.toUpperCase()
+			break;
+			case "uppersnakecase":
+				ref = ref.toUpperCase().replaceAll(" ", "_")
+			break;
+			default:
+				logerror("unknow tramsform:", transform)
+				// Nothing here.
+			}
+		}
+
+		const href = "./"+ref
 		anchor.setAttribute("href", href)
 
 		element.replaceWith(anchor)
 	}
 
-	console.log("[ziba][transform_link] end")
+	log("[transform_link] end")
+}
+
+function log(...args) {
+	args.unshift("[ziba]");
+	console.log(...args);
+}
+
+function logerror(...args) {
+	args.unshift("[ziba] ERROR:");
+	console.error(...args);
 }

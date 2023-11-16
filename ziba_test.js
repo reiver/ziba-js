@@ -73,6 +73,146 @@ function testTransform() {
 			html:'<ul><li><ziba-link>one</ziba-link></li><li><ziba-link>two</ziba-link></li><li><ziba-link>three</ziba-link></li></ul>',
 			expected:'<ul><li><a href="./one">one</a></li><li><a href="./two">two</a></li><li><a href="./three">three</a></li></ul>',
 		},
+
+
+
+		{
+			html:'<ziba-link transform="lowercase">e</ziba-link>',
+			expected:'<a href="./e">e</a>',
+		},
+		{
+			html:'<ziba-link transform="lowercase">E</ziba-link>',
+			expected:'<a href="./e">E</a>',
+		},
+		{
+			html:'<ziba-link transform="lowercase">example</ziba-link>',
+			expected:'<a href="./example">example</a>',
+		},
+		{
+			html:'<ziba-link transform="lowercase">Example</ziba-link>',
+			expected:'<a href="./example">Example</a>',
+		},
+		{
+			html:'<ziba-link transform="lowercase">eXAMPLE</ziba-link>',
+			expected:'<a href="./example">eXAMPLE</a>',
+		},
+		{
+			html:'<ziba-link transform="lowercase">EXAMPLE</ziba-link>',
+			expected:'<a href="./example">EXAMPLE</a>',
+		},
+		{
+			html:'<ziba-link transform="lowercase">Hello world</ziba-link>',
+			expected:'<a href="./hello world">Hello world</a>',
+		},
+		{
+			html:'<ziba-link transform="lowercase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./apple banana cherry">apple Banana CHERRY</a>',
+		},
+
+
+
+		{
+			html:'<ziba-link transform="uppercase">e</ziba-link>',
+			expected:'<a href="./E">e</a>',
+		},
+		{
+			html:'<ziba-link transform="uppercase">E</ziba-link>',
+			expected:'<a href="./E">E</a>',
+		},
+		{
+			html:'<ziba-link transform="uppercase">example</ziba-link>',
+			expected:'<a href="./EXAMPLE">example</a>',
+		},
+		{
+			html:'<ziba-link transform="uppercase">Example</ziba-link>',
+			expected:'<a href="./EXAMPLE">Example</a>',
+		},
+		{
+			html:'<ziba-link transform="uppercase">eXAMPLE</ziba-link>',
+			expected:'<a href="./EXAMPLE">eXAMPLE</a>',
+		},
+		{
+			html:'<ziba-link transform="uppercase">EXAMPLE</ziba-link>',
+			expected:'<a href="./EXAMPLE">EXAMPLE</a>',
+		},
+		{
+			html:'<ziba-link transform="uppercase">Hello world</ziba-link>',
+			expected:'<a href="./HELLO WORLD">Hello world</a>',
+		},
+		{
+			html:'<ziba-link transform="uppercase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./APPLE BANANA CHERRY">apple Banana CHERRY</a>',
+		},
+
+
+
+		{
+			html:'<ziba-link transform="lowersnakecase">e</ziba-link>',
+			expected:'<a href="./e">e</a>',
+		},
+		{
+			html:'<ziba-link transform="lowersnakecase">E</ziba-link>',
+			expected:'<a href="./e">E</a>',
+		},
+		{
+			html:'<ziba-link transform="lowersnakecase">example</ziba-link>',
+			expected:'<a href="./example">example</a>',
+		},
+		{
+			html:'<ziba-link transform="lowersnakecase">Example</ziba-link>',
+			expected:'<a href="./example">Example</a>',
+		},
+		{
+			html:'<ziba-link transform="lowersnakecase">eXAMPLE</ziba-link>',
+			expected:'<a href="./example">eXAMPLE</a>',
+		},
+		{
+			html:'<ziba-link transform="lowersnakecase">EXAMPLE</ziba-link>',
+			expected:'<a href="./example">EXAMPLE</a>',
+		},
+		{
+			html:'<ziba-link transform="lowersnakecase">Hello world</ziba-link>',
+			expected:'<a href="./hello_world">Hello world</a>',
+		},
+		{
+			html:'<ziba-link transform="lowersnakecase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./apple_banana_cherry">apple Banana CHERRY</a>',
+		},
+
+
+
+		{
+			html:'<ziba-link transform="uppersnakecase">e</ziba-link>',
+			expected:'<a href="./E">e</a>',
+		},
+		{
+			html:'<ziba-link transform="uppersnakecase">E</ziba-link>',
+			expected:'<a href="./E">E</a>',
+		},
+		{
+			html:'<ziba-link transform="uppersnakecase">example</ziba-link>',
+			expected:'<a href="./EXAMPLE">example</a>',
+		},
+		{
+			html:'<ziba-link transform="uppersnakecase">Example</ziba-link>',
+			expected:'<a href="./EXAMPLE">Example</a>',
+		},
+		{
+			html:'<ziba-link transform="uppersnakecase">eXAMPLE</ziba-link>',
+			expected:'<a href="./EXAMPLE">eXAMPLE</a>',
+		},
+		{
+			html:'<ziba-link transform="uppersnakecase">EXAMPLE</ziba-link>',
+			expected:'<a href="./EXAMPLE">EXAMPLE</a>',
+		},
+		{
+			html:'<ziba-link transform="uppersnakecase">Hello world</ziba-link>',
+			expected:'<a href="./HELLO_WORLD">Hello world</a>',
+		},
+		{
+			html:'<ziba-link transform="uppersnakecase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./APPLE_BANANA_CHERRY">apple Banana CHERRY</a>',
+		},
 	]
 
 
