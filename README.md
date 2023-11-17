@@ -69,7 +69,7 @@ Here is an example usage of **ziba.js**:
   * attributes:
     * `dir`
     * `name`
-    * `transform`
+    * `transform` — possible values: `"lowercase"`, `"uppercase"`, `"lowerllamacase"`, `"upperllamacase"`, `"lowersnakecase"`, `"uppersnakecase"`
 
 ## Import
 
