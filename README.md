@@ -71,6 +71,36 @@ Here is an example usage of **ziba.js**:
     * `name`
     * `transform` — possible values: `"lowercase"`, `"uppercase"`, `"lowerllamacase"`, `"upperllamacase"`, `"lowersnakecase"`, `"uppersnakecase"`, `"lowerslugcase"`, `"upperslugcase"`
 
+### Text-Case
+
+Here are some examples to help understand the text-casing for the `transform` attribute:
+
+```
+
+"once TWICE tHRICE Fource" -- (lowercase) -------> "once twice thrice fource"
+
+"once TWICE tHRICE Fource" -- (uppercase) -------> "ONCE TWICE THRICE FOURCE"
+
+
+
+"once TWICE tHRICE Fource" -- (lowerllamacase) --> "oncetwicethricefource"
+
+"once TWICE tHRICE Fource" -- (upperllamacase) --> "ONCETWICETHRICEFOURCE"
+
+
+
+"once TWICE tHRICE Fource" -- (lowersnakecase) --> "once_twice_thrice_fource"
+
+"once TWICE tHRICE Fource" -- (uppersnakecase) --> "ONCE_TWICE_THRICE_FOURCE"
+
+
+
+"once TWICE tHRICE Fource" -- (lowerslugcase) ---> "once-twice-thrice-fource"
+
+"once TWICE tHRICE Fource" -- (upperslugcase) ---> "ONCE-TWICE-THRICE-FOURCE"
+
+```
+
 ## Import
 
 To import module **ziba** use `import` code like the following:
