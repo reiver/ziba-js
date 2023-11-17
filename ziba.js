@@ -84,6 +84,9 @@ function transform_link(rootElement) {
 			case "lowersnakecase":
 				ref = ref.toLowerCase().replaceAll(" ", "_")
 			break;
+			case "lowerslugcase":
+				ref = ref.toLowerCase().replaceAll(" ", "-")
+			break;
 			case "uppercase":
 				ref = ref.toUpperCase()
 			break;
@@ -92,6 +95,9 @@ function transform_link(rootElement) {
 			break;
 			case "uppersnakecase":
 				ref = ref.toUpperCase().replaceAll(" ", "_")
+			break;
+			case "upperslugcase":
+				ref = ref.toUpperCase().replaceAll(" ", "-")
 			break;
 			default:
 				logerror("unknown transform:", transform)
