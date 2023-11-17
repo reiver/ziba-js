@@ -99,7 +99,15 @@ function transform_link(rootElement) {
 			}
 		}
 
-		const href = "./"+ref
+		let dir = element.getAttribute("dir")
+
+		let href = "./"
+		if ('string' === typeof dir && "" !== dir) {
+			href += dir
+			href += "/"
+		}
+		href += ref
+
 		anchor.setAttribute("href", href)
 
 		element.replaceWith(anchor)

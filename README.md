@@ -27,22 +27,25 @@ Here is an example usage of **ziba.js**:
 				Notice that the href now has the value of the title of the ziba-link
 			</p>
 			<p>
-				<ziba-link tramsform="lowercase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./once twice thrice fource">once Twice tHRICE FOURCE</a>
+				<ziba-link transform="lowercase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./once twice thrice fource">once Twice tHRICE FOURCE</a>
 			</p>
 			<p>
-				<ziba-link tramsform="uppercase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./ONCE TWICE THRICE FOURCE">once Twice tHRICE FOURCE</a>
+				<ziba-link transform="uppercase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./ONCE TWICE THRICE FOURCE">once Twice tHRICE FOURCE</a>
 			</p>
 			<p>
-				<ziba-link tramsform="lowersnakecase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./once_twice_thrice_fource">once Twice tHRICE FOURCE</a>
+				<ziba-link transform="lowersnakecase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./once_twice_thrice_fource">once Twice tHRICE FOURCE</a>
 			</p>
 			<p>
-				<ziba-link tramsform="uppersnakecase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./ONCE_TWICE_THRICE_FOURCE">once Twice tHRICE FOURCE</a>
+				<ziba-link transform="uppersnakecase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./ONCE_TWICE_THRICE_FOURCE">once Twice tHRICE FOURCE</a>
 			</p>
 			<p>
-				<ziba-link tramsform="lowerllamacase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./oncetwicethricefource">once Twice tHRICE FOURCE</a>
+				<ziba-link transform="lowerllamacase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./oncetwicethricefource">once Twice tHRICE FOURCE</a>
 			</p>
 			<p>
-				<ziba-link tramsform="upperllamacase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./ONCETWICETHRICEFOURCE">once Twice tHRICE FOURCE</a>
+				<ziba-link transform="upperllamacase">once Twice tHRICE FOURCE</ziba-link> should become <a href="./ONCETWICETHRICEFOURCE">once Twice tHRICE FOURCE</a>
+			</p>
+			<p>
+				<ziba-link dir="apple Banana CHERRY">>once Twice tHRICE FOURCE</ziba-link> should become <a href="./apple Banana CHERRY/once twice thrice fource">once Twice tHRICE FOURCE</a>
 			</p>
 			<p>
 				ziba-link is designed to work for only local links.
@@ -64,8 +67,9 @@ Here is an example usage of **ziba.js**:
 
 * `<ziba-link>` — used for local links.
   * attributes:
-    * `title`
-    * `tramsform`
+    * `dir`
+    * `name`
+    * `transform`
 
 ## Import
 

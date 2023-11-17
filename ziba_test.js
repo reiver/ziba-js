@@ -108,6 +108,10 @@ function testTransform() {
 			html:'<ziba-link transform="lowercase">apple Banana CHERRY</ziba-link>',
 			expected:'<a href="./apple banana cherry">apple Banana CHERRY</a>',
 		},
+		{
+			html:'<ziba-link dir="one TWO tHREE Four" transform="lowercase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./one TWO tHREE Four/apple banana cherry">apple Banana CHERRY</a>',
+		},
 
 
 
@@ -142,6 +146,10 @@ function testTransform() {
 		{
 			html:'<ziba-link transform="uppercase">apple Banana CHERRY</ziba-link>',
 			expected:'<a href="./APPLE BANANA CHERRY">apple Banana CHERRY</a>',
+		},
+		{
+			html:'<ziba-link dir="one TWO tHREE Four" transform="uppercase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./one TWO tHREE Four/APPLE BANANA CHERRY">apple Banana CHERRY</a>',
 		},
 
 
@@ -178,6 +186,10 @@ function testTransform() {
 			html:'<ziba-link transform="lowersnakecase">apple Banana CHERRY</ziba-link>',
 			expected:'<a href="./apple_banana_cherry">apple Banana CHERRY</a>',
 		},
+		{
+			html:'<ziba-link dir="one TWO tHREE Four" transform="lowersnakecase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./one TWO tHREE Four/apple_banana_cherry">apple Banana CHERRY</a>',
+		},
 
 
 
@@ -212,6 +224,10 @@ function testTransform() {
 		{
 			html:'<ziba-link transform="uppersnakecase">apple Banana CHERRY</ziba-link>',
 			expected:'<a href="./APPLE_BANANA_CHERRY">apple Banana CHERRY</a>',
+		},
+		{
+			html:'<ziba-link dir="one TWO tHREE Four" transform="uppersnakecase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./one TWO tHREE Four/APPLE_BANANA_CHERRY">apple Banana CHERRY</a>',
 		},
 
 
@@ -248,6 +264,10 @@ function testTransform() {
 			html:'<ziba-link transform="lowerllamacase">apple Banana CHERRY</ziba-link>',
 			expected:'<a href="./applebananacherry">apple Banana CHERRY</a>',
 		},
+		{
+			html:'<ziba-link dir="one TWO tHREE Four" transform="lowerllamacase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./one TWO tHREE Four/applebananacherry">apple Banana CHERRY</a>',
+		},
 
 
 
@@ -282,6 +302,10 @@ function testTransform() {
 		{
 			html:'<ziba-link transform="upperllamacase">apple Banana CHERRY</ziba-link>',
 			expected:'<a href="./APPLEBANANACHERRY">apple Banana CHERRY</a>',
+		},
+		{
+			html:'<ziba-link dir="one TWO tHREE Four" transform="upperllamacase">apple Banana CHERRY</ziba-link>',
+			expected:'<a href="./one TWO tHREE Four/APPLEBANANACHERRY">apple Banana CHERRY</a>',
 		},
 	]
 
