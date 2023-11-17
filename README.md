@@ -22,7 +22,7 @@ Here is an example usage of **ziba.js**:
 				Notice that the text and the href are the same.
 			</p>
 			<p>
-				Here is another one <ziba-link title="four">fource</ziba-link>
+				Here is another one <ziba-link name="four">fource</ziba-link>
 				This ziba tag will get turned into <a href="./four">fource</a>
 				Notice that the href now has the value of the title of the ziba-link
 			</p>

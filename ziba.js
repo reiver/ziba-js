@@ -67,9 +67,9 @@ function transform_link(rootElement) {
 		anchor.innerHTML = element.innerHTML
 
 		let ref = element.innerText
-		const elementTitle = element.getAttribute("title")
-		if (elementTitle) {
-			ref = elementTitle
+		const elementName = element.getAttribute("name")
+		if (elementName) {
+			ref = elementName
 		}
 
 		const transform = element.getAttribute("transform")

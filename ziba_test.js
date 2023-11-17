@@ -44,26 +44,26 @@ function testTransform() {
 
 
 		{
-			html:'<ziba-link title="one">once</ziba-link>',
+			html:'<ziba-link name="one">once</ziba-link>',
 			expected:'<a href="./one">once</a>',
 		},
 		{
-			html:'<ziba-link title="two">twice</ziba-link>',
+			html:'<ziba-link name="two">twice</ziba-link>',
 			expected:'<a href="./two">twice</a>',
 		},
 		{
-			html:'<ziba-link title="three">thrice</ziba-link>',
+			html:'<ziba-link name="three">thrice</ziba-link>',
 			expected:'<a href="./three">thrice</a>',
 		},
 		{
-			html:'<ziba-link title="four">fource</ziba-link>',
+			html:'<ziba-link name="four">fource</ziba-link>',
 			expected:'<a href="./four">fource</a>',
 		},
 
 
 
 		{
-			html:'<ziba-link title="1 2 3 4">ONCE TWICE THRICE FOURCE</ziba-link>',
+			html:'<ziba-link name="1 2 3 4">ONCE TWICE THRICE FOURCE</ziba-link>',
 			expected:'<a href="./1 2 3 4">ONCE TWICE THRICE FOURCE</a>',
 		},
 
@@ -285,7 +285,6 @@ function testTransform() {
 		},
 	]
 
-
 	tests.forEach(function(test, testNumber){
 		if (undefined === ziba.transform) {
 			console.error("[test-tramsform] For test", testNumber, "ziba.transform is undefined.")
@@ -312,5 +311,4 @@ function testTransform() {
 
 		console.log("[test-tramsform] Test №", testNumber, "passed.")
 	})
-
 }
