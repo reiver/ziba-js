@@ -94,7 +94,7 @@ function transform_link(rootElement) {
 				ref = ref.toUpperCase().replaceAll(" ", "_")
 			break;
 			default:
-				logerror("unknow transform:", transform)
+				logerror("unknown transform:", transform)
 				// Nothing here.
 			}
 		}
