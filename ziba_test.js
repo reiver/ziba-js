@@ -311,7 +311,7 @@ function testTransform() {
 
 	tests.forEach(function(test, testNumber){
 		if (undefined === ziba.transform) {
-			console.error("[test-tramsform] For test", testNumber, "ziba.transform is undefined.")
+			console.error("[test-transform] For test", testNumber, "ziba.transform is undefined.")
 			return
 		}
 
@@ -326,13 +326,13 @@ function testTransform() {
 		const actual = element.innerHTML
 
 		if (expected !== actual) {
-			console.error("[test-tramsform] For test №", testNumber, "the actual value is not what was expected.")
-			console.log("[test-tramsform] EXPECTED:", JSON.stringify(expected))
-			console.log("[test-tramsform] ACTUAL:  ", JSON.stringify(actual))
-			console.log("[test-tramsform] HTML:    ", JSON.stringify(html))
+			console.error("[test-transform] For test №", testNumber, "the actual value is not what was expected.")
+			console.log("[test-transform] EXPECTED:", JSON.stringify(expected))
+			console.log("[test-transform] ACTUAL:  ", JSON.stringify(actual))
+			console.log("[test-transform] HTML:    ", JSON.stringify(html))
 			return
 		}
 
-		console.log("[test-tramsform] Test №", testNumber, "passed.")
+		console.log("[test-transform] Test №", testNumber, "passed.")
 	})
 }
